@@ -20,7 +20,7 @@ const GetAnswers = () => {
             {/* Adjusted width to approximately 66% for both base and medium screens */}
             <h3 className="text-lg font-semibold mb-2">How FDs are taxed</h3>
             <p className="text-gray-700">Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <a href="#" className="text-blue-500 mt-2 inline-block">Read more...</a>
+            <a className="text-blue-500 mt-2 inline-block">Read more...</a>
           </div>
         ))}
       </div>

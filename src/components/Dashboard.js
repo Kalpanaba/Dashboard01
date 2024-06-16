@@ -27,34 +27,42 @@ const Dashboard = () => {
         </div>
         <div className="flex items-center relative">
           <nav className="mr-4">
-            <a href="#" className="text-gray-700 mx-2">
-              Dashboard
-            </a>
-            <a href="#" className="text-gray-700 mx-2">
-              FAQs
-            </a>
-            <a href="#" className="text-gray-700 mx-2">
-              Support
-            </a>
+            <a className="text-gray-700 mx-2">Dashboard</a>
+            <a className="text-gray-700 mx-2">FAQs</a>
+            <a className="text-gray-700 mx-2">Support</a>
           </nav>
-          <button className="p-2 bg-gray-200 rounded-full flex items-center" onClick={toggleDropdown}>
+          <button
+            className="p-2 bg-gray-200 rounded-full flex items-center"
+            onClick={toggleDropdown}
+          >
             Profile
-            <svg xmlns="http://www.w3.org/2000/svg" className={`h-5 w-5 ml-1 ${showDropdown ? 'transform rotate-180' : ''}`} viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M10 12a1 1 0 01-.707-.293l-4-4a1 1 0 111.414-1.414L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4A1 1 0 0110 12z" clipRule="evenodd" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className={`h-5 w-5 ml-1 ${
+                showDropdown ? 'transform rotate-180' : ''
+              }`}
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M10 12a1 1 0 01-.707-.293l-4-4a1 1 0 111.414-1.414L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4A1 1 0 0110 12z"
+                clipRule="evenodd"
+              />
             </svg>
           </button>
           {showDropdown && (
             <div className="absolute right-10 mt-2 w-48 bg-white border rounded-lg shadow-xl">
-              <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">
+              <a className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">
                 My Profile
               </a>
-              <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">
+              <a className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">
                 My FDs
               </a>
-              <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">
+              <a className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">
                 My Transactions
               </a>
-              <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">
+              <a className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">
                 Logout
               </a>
             </div>
@@ -75,7 +83,7 @@ const Dashboard = () => {
         <div className="md:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6">
           <FDBankCard
             bankName="Utkarsh Small Finance Bank"
-            logo = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfAb4DYQXb91WSs8DDS_Lcz5d52CxBWHJp-Q&s"
+            logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfAb4DYQXb91WSs8DDS_Lcz5d52CxBWHJp-Q&s"
             description="Highest Interest Rate, RBI Insured"
             interestRate="9.10"
             buttonLabel="Book Now"
@@ -84,33 +92,35 @@ const Dashboard = () => {
           />
           <FDBankCard
             bankName="Bajaj Finserv"
-             logo = "https://companieslogo.com/img/orig/BAJAJFINSV.NS-69a58fe4.png?t=1596838048"
+            logo="https://companieslogo.com/img/orig/BAJAJFINSV.NS-69a58fe4.png?t=1596838048"
             description="Crisil AAA Rated, No Video KYC required"
             interestRate="8.80"
             buttonLabel="Book Now"
             bgColor="bg-blue-100"
             buttonColor="bg-blue-600"
           />
-       <FDBankCard
-  bankName="Shriram Finanace"
-   logo="https://companieslogo.com/img/orig/SHRIRAMFIN.NS-b563e9ad.png?t=1612566643"
-  description="Highest Interest Rate, RBI Insured"
-  interestRate="9.10"
-  buttonLabel="Book Now"
-  bgColor="bg-black-200" // Adjusted Tailwind CSS class
-  buttonColor="bg-black text-white" // Adjusted Tailwind CSS class
-/>
+          <FDBankCard
+            bankName="Shriram Finanace"
+            logo="https://companieslogo.com/img/orig/SHRIRAMFIN.NS-b563e9ad.png?t=1612566643"
+            description="Highest Interest Rate, RBI Insured"
+            interestRate="9.10"
+            buttonLabel="Book Now"
+            bgColor="bg-black-200" // Adjusted Tailwind CSS class
+            buttonColor="bg-black text-white" // Adjusted Tailwind CSS class
+          />
           <FDBankCard
             bankName="Mahindra Finance"
             logo="https://bfsi.eletsonline.com/wp-content/uploads/2015/05/mahindra-finance.jpg"
-            
             description="Crisil AAA Rated, No Video KYC required"
             interestRate="8.80"
             buttonLabel="Book Now"
             bgColor="bg-red-100"
             buttonColor="bg-red-600"
           />
-          <GetAnswers />
+          {/* Adjusted col-span to make it span across the full width */}
+          <div className="md:col-span-2">
+            <GetAnswers />
+          </div>
         </div>
 
         {/* Vertical Container (30% width) */}

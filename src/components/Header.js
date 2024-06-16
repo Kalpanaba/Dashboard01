@@ -1,19 +1,22 @@
 import React from 'react';
 
 const Header = () => {
+  const logoUrl = 'https://st3.depositphotos.com/32211788/35507/v/450/depositphotos_355077834-stock-illustration-letter-logo-icon-design-template.jpg';
+
   return (
-    <header className="flex justify-between items-center p-6 bg-white shadow mb-6">
+    <header className="flex justify-between items-center p-4 bg-white shadow-md mb-4">
       <div className="flex items-center">
-        <img src="/logo.png" alt="Logo" className="h-8 w-8 mr-4" />
-        <h1 className="text-2xl font-semibold">Welcome, Johan Paul</h1>
+        <img src={logoUrl} alt="Logo" className="h-2 w-2 object-contain" />
+        <h1 className="text-lg font-semibold">Welcome, Johan Paul</h1>
       </div>
       <div className="flex items-center">
-        <nav className="mr-4">
+        <nav className="hidden md:flex mr-4">
           <a href="#" className="text-gray-700 mx-2">Dashboard</a>
           <a href="#" className="text-gray-700 mx-2">FAQs</a>
           <a href="#" className="text-gray-700 mx-2">Support</a>
         </nav>
-        <button className="p-2 bg-gray-200 rounded-full">Profile</button>
+        <button className="p-2 bg-gray-200 rounded-full md:hidden">Profile</button>
+        <button className="p-2 bg-gray-200 rounded-full hidden md:block">Profile</button>
       </div>
     </header>
   );
